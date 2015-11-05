@@ -1,30 +1,122 @@
 /* app css stylesheet */
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+header {
+  border-top: 2em solid rgb(205, 205, 205);
+  padding: 3.546099290780142% 0 0 0;
 }
 
-.menu:before {
-  content: "[";
+.navibar a {
+  text-decoration: none !important;
+  color: rgb(205, 201, 201);
 }
 
-.menu:after {
-  content: "]";
+footer {
+  text-align: center;
+  font: normal 100% 'Raleway', sans-serif;
+  background-color: rgb(205, 205, 205);
+  margin: 2em 0;
+  border-top: 2em solid rgb(205, 205, 205);
+  border-bottom: 2em solid rgb(205, 205, 205);
 }
 
-.menu > li {
+footer a {
+  text-decoration: none !important;
+}
+
+footer ul {
+  display: inline;
+  padding: 0;
+}
+
+footer li {
   display: inline;
 }
 
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
+footer img {
+  width: 32px;
+  margin: 0 5px;
 }
 
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
-}
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+  /*==========  Mobile First Method  ==========*/
+
+  /* Custom, iPhone Retina */ 
+  @media only screen and (min-width : 320px) {
+    .logo {
+      width: 60px;
+      height: 67px;
+    }
+
+    a.logo {
+      padding: 0 0 0 20px;
+      width: 80px;
+      height: 67px;
+    }
+
+    .menu {
+      position: absolute;
+      display: inline;
+      vertical-align: middle;
+      width: 30px;
+      height: 22px;
+      right: 20px;
+      top: 37px;
+    }
+
+    a.menu {
+      padding: 0 20px 0 0;
+    }
+
+    .navibar {
+      display: none;
+    }
+  }
+
+  /* Extra Small Devices, Phones */ 
+  @media only screen and (min-width : 480px) {
+
+  }
+
+  /* Small Devices, Tablets */
+  @media only screen and (min-width : 768px) {
+    .logo {
+      width: 100px;
+      height: 111px;
+    }
+
+    a.logo {
+      padding: 0 0 0 70px;
+      text-decoration: none !important;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .navibar {
+      display: inline;
+      font: normal 18px 'Raleway', Arial, sans-serif;
+      font-weight: 600;
+    }
+
+    .navibar li {
+      display: inline;
+      margin: 0 3.2232070910556% 0 3.2232070910556%;
+    }
+
+    .navibar a:hover, .navibar a:focus, .navibar a:active, .navibar a.active {
+      color: rgb(0, 0, 0);
+    }
+  }
+
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width : 992px) {
+  }
+
+  /* Large Devices, Wide Screens */
+  @media only screen and (min-width : 1200px) {
+
+  }
