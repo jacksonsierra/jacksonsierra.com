@@ -1,25 +1,63 @@
-'use strict';
+'use strict'
 
 // Declare app level module which depends on views, and components
 var jacksonSierra = angular.module('jacksonSierra', [
     'ui.router'
-  , 'jacksonSierra.view1'
-  , 'jacksonSierra.view2'
+  , 'jacksonSierra.header'
+  , 'jacksonSierra.footer'
+  , 'jacksonSierra.home'
+  , 'jacksonSierra.apps'
+  , 'jacksonSierra.blog'
+  , 'jacksonSierra.about'
   , 'jacksonSierra.version'
 ]);
 
 jacksonSierra.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
-  $urlRouterProvider.otherwise('/view1');
-
+  $urlRouterProvider.otherwise('/');
+  
   $stateProvider
-    .state('view1', {
-        url: '/view1'
-      , templateUrl: './app/components/view1/view1.html'
-      , controller: 'View1Ctrl'
+    .state('root', {
+        url: '/'
+      , views: {
+          'header@': {
+            templateUrl: './app/shared/header/header.html'
+          , controller: 'HeaderCtrl'
+          }
+        , 'container@': {
+            templateUrl: './app/components/home/home.html'
+          , controller: 'HomeCtrl'
+        }
+        , 'footer@': {
+            templateUrl: './app/shared/footer/footer.html'
+          , controller: 'FooterCtrl'
+        } 
+      }
     })
-    .state('view2', {
-        url: '/view2'
-      , templateUrl: './app/components/view2/view2.html'
-      , controller: 'View2Ctrl'
+    .state('root.apps', {
+        url: 'apps'
+      , views: {
+          'container@': {
+            templateUrl: './app/components/apps/apps.html'
+          , controller: 'AppsCtrl'
+        }
+      }
+    })
+    .state('root.blog', {
+        url: 'blog'
+      , views: {
+          'container@': {
+            templateUrl: './app/components/blog/blog.html'
+          , controller: 'BlogCtrl'
+        }
+      }
+    })
+    .state('root.about', {
+        url: 'about'
+      , views: {
+          'container@': {
+            templateUrl: './app/components/about/about.html'
+          , controller: 'AboutCtrl'
+        }
+      }
     });
 }]);
