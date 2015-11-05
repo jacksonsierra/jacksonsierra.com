@@ -1,2 +1,8 @@
+<script>
+  angular.element(document).ready(function () {
+    angular.element('.navibar a').removeClass('active');
+    angular.element('a[ui-sref="root"]').addClass('active');
+  });
+</script>
 <h1>{{test}}</h1>
 <p>This is the partial for view 1.</p>
