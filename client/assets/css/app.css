@@ -16,8 +16,17 @@ header {
    clear: both;
 }
 
+.navibar {
+  font: normal 1.4em 'Raleway', Arial, sans-serif;
+  font-weight: 600;
+}
+
 .navibar a {
   color: rgb(205, 201, 201);
+}
+
+.navibar a:hover, .navibar a:focus, .navibar a:active, .navibar a.active {
+  color: rgb(0, 0, 0);
 }
 
 footer {
@@ -66,9 +75,9 @@ footer img {
     }
 
     a.logo {
-      padding: 0 0 0 20px;
+      margin: 0 0 15px 20px;
       float: left;
-      width: 80px;
+      width: 60px;
       height: 67px;
     }
 
@@ -78,15 +87,31 @@ footer img {
     }
 
     a.menu {
-      padding: 0 20px 0 0;
+      margin: 0 20px 0 0;
       float: right;
-      width: 50px;
+      width: 30px;
       height: 22px;
       line-height: 67px;
     }
 
+    .glyphicon {
+      font-size: 1.8em;
+      vertical-align: middle;
+      color: rgb(0, 0, 0);
+    }
+
     .navibar {
-      display: none;
+      display: block;
+      clear: left;
+      width: 100%;
+      list-style: none;
+      padding: 0;
+    }
+
+    .navibar li {
+      background-color: rgb(245, 245, 245);
+      border: 1px solid rgb(255, 255, 255);
+      padding: 0 0 0 30px;
     }
   }
 
@@ -117,9 +142,9 @@ footer img {
     }
 
     a.logo {
-      padding: 0 0 0 70px;
+      margin: 0 0 10px 70px;
       float: left;
-      width: 170px;
+      width: 100px;
       height: 111px;
     }
 
@@ -129,18 +154,12 @@ footer img {
 
     .navibar {
       display: inline;
-      font: normal 1.125em 'Raleway', Arial, sans-serif;
-      font-weight: 600;
       line-height: 111px;
     }
 
     .navibar li {
       display: inline;
       margin: 0 3.2232070910556% 0 3.2232070910556%;
-    }
-
-    .navibar a:hover, .navibar a:focus, .navibar a:active, .navibar a.active {
-      color: rgb(0, 0, 0);
     }
   }
 
