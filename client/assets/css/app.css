@@ -31,7 +31,7 @@ header {
 
 footer {
   text-align: center;
-  font: normal 100% 'Raleway', sans-serif;
+  font: normal 100% 'Raleway', Arial, sans-serif;
   background-color: rgb(255, 255, 255);
   border-top: 2em solid rgb(255, 255, 255);
   border-bottom: 2em solid rgb(255, 255, 255);
@@ -55,10 +55,10 @@ footer img {
 
 #home-img {
   background-image: url('../../dist/img/botswana-grey.min.jpeg');
-  width: 100%;
-  height: 75vh;
   background-position: 60% 50%;
-  background-size: cover
+  background-size: cover;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 /*==================================================
@@ -75,7 +75,7 @@ footer img {
     }
 
     a.logo {
-      margin: 0 0 15px 20px;
+      margin: 0 20px;
       float: left;
       width: 60px;
       height: 67px;
@@ -84,6 +84,7 @@ footer img {
     .menu {
       width: 30px;
       height: 22px;
+      cursor: pointer;
     }
 
     a.menu {
@@ -101,7 +102,7 @@ footer img {
     }
 
     .navibar {
-      display: block;
+      display: none;
       clear: left;
       width: 100%;
       list-style: none;
@@ -120,12 +121,20 @@ footer img {
       bottom: 0;
       left: 0;
     }
+
+    #home-img {
+      height: 59.14893617021276vh;
+    }
   }
 
   @media only screen and (orientation:landscape) and (min-width : 320px) {
     footer {
       top: 100%;
       left: 0;
+    }
+
+    #home-img {
+      height: 74.60992907801418vh;
     }
   }
 
@@ -142,7 +151,7 @@ footer img {
     }
 
     a.logo {
-      margin: 0 0 10px 70px;
+      margin: 0 70px;
       float: left;
       width: 100px;
       height: 111px;
@@ -153,13 +162,16 @@ footer img {
     }
 
     .navibar {
-      display: inline;
+      display: inline !important;
       line-height: 111px;
     }
 
     .navibar li {
       display: inline;
-      margin: 0 3.2232070910556% 0 3.2232070910556%;
+      margin: 0 4.0290088638195005% 0 0;
+      background-color: rgb(255, 255, 255);
+      border: 0px solid rgb(255, 255, 255);
+      padding: 0;
     }
   }
 

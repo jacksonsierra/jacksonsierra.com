@@ -1,13 +1,13 @@
 <a ui-sref="root" class="logo">
   <img class="logo" src="./dist/img/jks-initials.min.png" />
 </a>
-<a ui-sref="menu" class="menu" ng-click="hamburgerClicked = !hamburgerClicked">
+<a class="menu" ng-click="toggleMenu()">
   <img class="menu" src="./dist/img/hamburger.min.png" ng-show="!hamburgerClicked" />
   <span class="menu" ng-show="hamburgerClicked">
     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
   </span>
 </a>
-<ul class="navibar" ng-show="hamburgerClicked">
+<ul class="navibar">
   <li><a ui-sref="root" class="text-uppercase active">Home</a></li>
   <li><a ui-sref=".apps" class="text-uppercase">Apps</a></li>
   <li><a ui-sref=".blog" class="text-uppercase">Blog</a></li>
