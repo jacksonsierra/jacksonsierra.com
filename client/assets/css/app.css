@@ -54,7 +54,7 @@ footer img {
 }
 
 #home-img {
-  background-image: url('../../dist/img/botswana-grey.min.jpeg');
+  background-image: url('../img/botswana-grey.min.jpeg');
   background-position: 60% 50%;
   background-size: cover;
   max-width: 100%;

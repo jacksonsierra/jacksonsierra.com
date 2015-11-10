@@ -10,10 +10,10 @@ angular.module('jacksonSierra.header', [])
 
     if($scope.hamburgerClicked) {
       angular.element('.navibar').css('display', 'block');
-      angular.element('.logo').css('margin-bottom', '15px')
+      angular.element('.logo').css('margin-bottom', '15px');
     } else {
       angular.element('.navibar').css('display', 'none');
-      angular.element('.logo').css('margin-bottom', '0px')
+      angular.element('.logo').css('margin-bottom', '0px');
     }
-  }
+  };
 }]);

@@ -20,15 +20,15 @@ jacksonSierra.config(['$urlRouterProvider', '$stateProvider', function($urlRoute
         url: '/'
       , views: {
           'header@': {
-            templateUrl: './app/shared/header/header.html'
+            templateUrl: './html/shared/header/header.min.html'
           , controller: 'HeaderCtrl'
           }
         , 'container@': {
-            templateUrl: './app/components/home/home.html'
+            templateUrl: './html/components/home/home.min.html'
           , controller: 'HomeCtrl'
         }
         , 'footer@': {
-            templateUrl: './app/shared/footer/footer.html'
+            templateUrl: './html/shared/footer/footer.min.html'
           , controller: 'FooterCtrl'
         } 
       }
@@ -37,7 +37,7 @@ jacksonSierra.config(['$urlRouterProvider', '$stateProvider', function($urlRoute
         url: 'apps'
       , views: {
           'container@': {
-            templateUrl: './app/components/apps/apps.html'
+            templateUrl: './html/components/apps/apps.min.html'
           , controller: 'AppsCtrl'
         }
       }
@@ -46,7 +46,7 @@ jacksonSierra.config(['$urlRouterProvider', '$stateProvider', function($urlRoute
         url: 'blog'
       , views: {
           'container@': {
-            templateUrl: './app/components/blog/blog.html'
+            templateUrl: './html/components/blog/blog.min.html'
           , controller: 'BlogCtrl'
         }
       }
@@ -55,7 +55,7 @@ jacksonSierra.config(['$urlRouterProvider', '$stateProvider', function($urlRoute
         url: 'about'
       , views: {
           'container@': {
-            templateUrl: './app/components/about/about.html'
+            templateUrl: './html/components/about/about.min.html'
           , controller: 'AboutCtrl'
         }
       }
