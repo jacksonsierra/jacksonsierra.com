@@ -1,7 +1,23 @@
-<script>
-  angular.element(document).ready(function () {
-    angular.element('.navibar a').removeClass('active');
-    angular.element('a[ui-sref=".apps"]').addClass('active');
-  });
-</script>
-<h1>apps</h1>
+<div class="container-overflow">
+  <div class="row row-md" ng-repeat="app in appsArray">
+    <div class="col-md-2"></div>
+    <div class="col-md-5" ng-style={{app.photo}}></div>
+    <div class="col-md-3">
+      <a ng-href={{app.url}} target="_blank">
+        <h3 class="title-md-3" ng-style={{app.font}}>{{app.title}}</h3>
+      </a>
+      <p class="descrip-md-3">{{app.descrip}}</p>
+      <ul class="list-inline links-md-3">
+        <li ng-repeat="link in app.links">
+          <a ng-href={{link.url}} target="_blank" tooltip-placement="top" uib-tooltip={{link.title}}>
+            <img class="ext-icon" ng-src={{link.icon}} />
+          </a>
+        </li>
+      </ul>
+      <ul class="list-inline">
+        <li class="btn btn-default tag" ng-repeat="tech in app.stack">{{tech}}</li>
+      </ul>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
