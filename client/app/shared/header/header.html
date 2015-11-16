@@ -1,4 +1,4 @@
-<a ui-sref="root" class="logo">
+<a ui-sref="root" class="logo" ng-class="{ 'margin-bottom': hamburgerClicked }">
   <img class="logo" src="./img/jks-initials.min.png" />
 </a>
 <a class="menu" ng-click="toggleMenu()">
@@ -7,9 +7,8 @@
     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
   </span>
 </a>
-<ul class="navibar">
-  <li><a ui-sref="root" class="text-uppercase active">Home</a></li>
-  <li><a ui-sref=".apps" class="text-uppercase">Apps</a></li>
-  <li><a ui-sref=".blog" class="text-uppercase">Blog</a></li>
-  <li><a ui-sref=".about" class="text-uppercase">About</a></li>
+<ul class="navibar" ng-class="{ 'display-block': hamburgerClicked, 'display-none': !hamburgerClicked }">
+  <li ng-repeat="page in pageArray">
+    <a ui-sref={{page.state}} ng-class="{ 'active': $index == pageSelected }" ng-click="clickPage($index)">{{page.title}}</a>
+  </li>
 </ul>
