@@ -1,6 +1,8 @@
-'use strict'
+'use strict';
 
-angular.module('jacksonSierra.footer', [])
+angular.module('jacksonSierra.footer', [
+    'ui.bootstrap'
+])
 
 .controller('FooterCtrl', ['$scope', function($scope) {
 
