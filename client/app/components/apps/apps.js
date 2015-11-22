@@ -61,7 +61,7 @@ angular.module('jacksonSierra.apps', [
               }
             , 'mobile': {
                   'title': 'iOS'
-                , 'url': null
+                , 'url': 'https://appetize.io/app/x7qywn60g6y0bn7krq2x7tkukw'
                 , 'icon': './img/ios.min.png'
             }
             , 'github': {
