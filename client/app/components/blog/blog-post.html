@@ -1,0 +1,14 @@
+<p class="post-body" ng-hide="postReadMore">
+  {{postBody | limitTo:postChrLimit }}...
+  <span class="read-more" ng-click="togglePost()">
+    read more
+  </span>
+</p>
+
+<p class="post-body" ng-show="postReadMore">
+  {{postBody}} 
+  <span class="read-more" ng-click="togglePost()">
+    read less
+  </span>
+</p>
+</p>

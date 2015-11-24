@@ -5,8 +5,8 @@ a {
   cursor: pointer;
 }
 
-p {
-  font-family: 'Raleway';
+h2, h4, p {
+  font-family: 'Raleway' !important;
 }
 
 header {
@@ -90,8 +90,6 @@ footer li {
 
 .row-md {
   border-bottom: 1px dotted rgb(225, 225, 225);
-  /*padding: 5vh 0;*/
-  margin-top: 5vh;
 }
 
 .col-md-5 {
@@ -135,6 +133,30 @@ footer li {
   margin-left: 0 !important;
 }
 
+.headline {
+  font-weight: 600;
+}
+
+.subhead {
+  color: rgb(150, 150, 150);
+  margin-bottom: 25px;
+}
+
+.metadata {
+  color: rgb(150, 150, 150);
+  text-align: center;
+}
+
+.read-more {
+  color: purple;
+  font-weight: 600;
+  font-family: 'Raleway';
+}
+
+.post-body {
+  margin-bottom: 20px;
+}
+
 /*==================================================
 =            Bootstrap 3 Media Queries             =
 ==================================================*/
@@ -153,7 +175,7 @@ footer li {
     }
 
     a.logo {
-      margin-left: 20px;
+      margin-left: 15px;
       margin-right: 20px;
       float: left;
       width: 60px;
@@ -197,6 +219,10 @@ footer li {
     .row {
       margin-left: 0 !important;
       margin-right: 0 !important;
+    }
+
+    .row-md {
+      padding-bottom: 20px;
     }
 
     footer {
@@ -267,8 +293,8 @@ footer li {
     }*/
 
     .row-md {
-      /*height: 50vh;*/
       height: auto;
+      margin-top: 5vh;
     }
 
     footer {
