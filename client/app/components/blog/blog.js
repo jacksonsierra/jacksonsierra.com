@@ -13,10 +13,11 @@ angular.module('jacksonSierra.blog', ['ngSanitize'])
               'ENTREPRENEURSHIP'
             , 'MANAGEMENT'
             , 'DATA'
-          ] 
+          ]
+        , 'chrLimit': 815
         , 'body': 'The <a target="_blank" href="http://leanstartup.co/conferences/lean-startup-conference-2015/">2015 Lean Startup Conference</a>, based on Eric Ries\' <a href="http://www.amazon.com/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/0307887898/ref=sr_1_1?ie=UTF8&qid=1449682168&sr=8-1&keywords=lean+startup"><em>The Lean Startup</em></a>, was held in San Francisco, California from November 16th to 19th, 2015.<br>
                   <br>
-                  Billed as "a gathering for entrepreneurs, innovators, and thought leaders from across sectors and structures...featuring the best of the Lean Startup community,” the conference focused on proving Lean principles exist in companies as large and diverse as General Electric or the IRS, rather than just small tech startups used in many of the book\'s case studies.<br>
+                  Billed as "a gathering for entrepreneurs, innovators, and thought leaders from across sectors and structures...featuring the best of the Lean Startup community," the conference focused on proving Lean principles exist in companies as large and diverse as General Electric or the IRS, rather than just small tech startups used in many of the book\'s case studies.<br>
                   <br>
                   <blockquote><p>What are Lean principles?</p></blockquote>
                   In my view, the Lean methodology is an extension of the Scientific Method that develops a solution to a problem by repeating the following steps during development:<br>
@@ -56,10 +57,13 @@ angular.module('jacksonSierra.blog', ['ngSanitize'])
                     <li>Absence of integration tests</li>
                   </ul>
                   If we return to our first list of Lean principles, we see that each of the attributes of Healthcare.gov\'s development are anathema to Lean.  Let\'s go one by one:<br>
+                  <br>
                   <blockquote class="blockquote-reverse"><p>Big requirements gathering upfront</p></blockquote>
-                  Big requirements gathering begets a gigantic MVP to satisfy all those requirements, which would likely take a very long time, perhaps so long that the requirements may even change (HealthCare.gov took ~3 years to develop).  Lean would advise to hypothesize which assumptions are limiting with respect to the website\'s viability, develop whatever the bare minimum is to test those most important assumptions, and further the product by building functionality and testing incremental assumptions.  HeathCare.gov did the opposite.<br>
+                  Big requirements gathering begets a gigantic MVP to satisfy all those requirements, which would likely take a very long time, perhaps so long that the requirements may even change (HealthCare.gov took ~3 years to develop).  Lean would advise to hone in on the assumptions critical for understanding the website\'s viability, develop whatever the bare minimum is to test those most important assumptions, and further the product by building functionality and testing incremental assumptions.  HeathCare.gov did the opposite.<br>
+                  <br>
                   <blockquote class="blockquote-reverse"><p>Everyone working in separate, individual silos</p></blockquote>
                   As mentioned previously, Lean advises for fully-dedicated, cross-functional teams in tackling any problem.  The thinking is it incubates ideas from different perspectives and encourages communication from stakeholders at every part of the solution.  The latter point is vital in ensuring the end-to-end integration tests are facilitated throughout the project\'s development, which brings us to the final point.<br>
+                  <br>
                   <blockquote class="blockquote-reverse"><p>Absence of integration tests</p></blockquote>
                   Widely maligned as one of the inexplicable failures of HealthCare.gov, contractors responsible for the development <a target="_blank" href="http://energycommerce.house.gov/hearing/ppaca-implementation-failures-didn%E2%80%99t-know-or-didn%E2%80%99t-disclose">spent only two weeks testing</a> whether the site worked from start to finish, out of a development period of three years.  Had the project used Lean, testing would\'ve occurred at each MVP demonstrated to customers to see where the holes burrowed.<br>
                   <br>
@@ -93,6 +97,8 @@ angular.module('jacksonSierra.blog', ['ngSanitize'])
 });
 
 function PostCtrl($scope) {
+  $scope.postSnippet = $scope.postBody.substr(0, $scope.postChrLimit);
+
   $scope.togglePost = function() {
     $scope.postReadMore = !$scope.postReadMore;
   };

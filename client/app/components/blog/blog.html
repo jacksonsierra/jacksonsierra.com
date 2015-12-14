@@ -4,7 +4,7 @@
       <h2 class="headline">{{post.headline}}</h2>
       <h4 class="subhead">{{post.subhead}}</h4>
       <p class="metadata">{{post.dateFormatted}}</p>
-      <blog-post post-chr-limit="200" post-body="post.body"></blog-post>
+      <blog-post post-chr-limit="post.chrLimit" post-body="post.body" post-read-more=false></blog-post>
       <ul class="list-inline">
         <li class="btn btn-default tag" ng-repeat="tag in post.tags">
           {{tag}}
