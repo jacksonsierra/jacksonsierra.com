@@ -145,6 +145,7 @@ footer li {
 .read-more {
   font-weight: 600;
   font-family: 'Raleway', Arial, sans-serif;
+  color: rgb(150, 150, 150);
   text-align: center;
   margin-bottom: 20px;
   cursor: pointer;

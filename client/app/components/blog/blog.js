@@ -2,7 +2,7 @@
 
 angular.module('jacksonSierra.blog', ['ngSanitize'])
 
-.controller('BlogCtrl', ['$scope', function($scope, $interpolate) {
+.controller('BlogCtrl', ['$scope', function($scope) {
   $scope.blogArray = [
       {
           'headline': 'The Lean Startup Conference 2015'
@@ -79,7 +79,49 @@ angular.module('jacksonSierra.blog', ['ngSanitize'])
             , 'UNSTRUCTURED LEARNING'
             , 'AUTONOMOUS LEARNING'
           ]
-        , 'body': 'Lorem ipsum'
+        , 'chrLimit': 355
+        , 'body': 'I played a game with myself the other day as I was walking along Market Street in San Francisco.  It was around 5:30pm on a work day, so the streets were quite full with SF foot traffic.<br>
+                  <br>
+                  The game was pretty simple — count the number of individuals walking who <em>were not</em> using a smartphone of some sort.  I assumed those listening to headphones were using their phone to do so, which seemed reasonable given it was San Francisco.<br>
+                  <br>
+                  I was blown away.  On 1st Street between Market and Mission, I probably passed 20 or so people.  Only three of them weren\'t using their phone, and two of those three were in conversation.  The rest were either in the half walking-half texting disaster zone, strapped in with headphones walking to point B, or on the phone with Mom.<br>
+                  <br>
+                  Albeit a silly anecdote, this story draws on a couple of interesting phenomena we see with mobile, namely:<br>
+                  <br>
+                    <ul>
+                      <li><strong>Ubiquity</strong> — everyone will soon have at least one of these devices, with emerging markets being a crucial new flow</li>
+                      <li><strong>Price</strong> — Mobile devices are typically cheaper than their desktop or laptop equivalents, which partly explains the ubiquity point</li>
+                      <li><strong>Capabilities</strong> — the amount of RAM in a smartphone today is greater than those of desktops just a decade earlier, enabling powerful experiences</li>
+                    </ul>
+                  A compelling argument on the power of the mobile experience versus traditional means begins to unfold in light of just these few observations.  I\'ll suspend further pontification and assume we agree that mobile is worth pursuing.<br>
+                  <br>
+                  According to a Pew Research Center study from this year, <a href="http://www.pewinternet.org/2015/04/01/us-smartphone-use-in-2015/">approximately two-thirds of Americans own smartphones</a>, putting the gross US figure over 200 million devices.  Next we\'ll look at the market share of the major smartphone platforms for those 200M+ devices (<a href="http://www.statista.com/statistics/266572/market-share-held-by-smartphone-platforms-in-the-united-states/">source</a>):<br>
+                  <br>
+                  <h4>US Market Share for Smartphone Users, 2012-2015</h4>
+                  <a href="http://www.statista.com/statistics/266572/market-share-held-by-smartphone-platforms-in-the-united-states/"><img src="../img/os-breakdown.min.png" alt="Statistic: Subscriber share held by smartphone operating systems in the United States from January 2012 to October 2015 | Statista" style="width: 100%; height: auto !important; max-width:1000px;-ms-interpolation-mode: bicubic;"/></a><br />Find more statistics at <a href="http://www.statista.com">Statista</a><br>
+                  <br>
+                  Perhaps surprising to some, more Americans have Android than Apple iOS devices. Thus economically-speaking, one interested in programming a mobile experience toward a US audience should choose Android if they want to reach the most users and are, at this point, specializing in just one platform.<br>
+                  <br>
+                  What the above graph also shows, however, is Apple\'s market share has increased north of 25% over the last three years, perhaps eating away at RIM\'s Blackberry holdouts, while Android has stayed flat.  And if we drill down into what versions of Android and iOS users are on globally, the story begins to look very complicated for Android (<a href="http://opensignal.com/reports/2015/08/android-fragmentation/">source</a>):<br>
+                  <br>
+                  <h4>Breakdown of Global Android and iOS Users by Version, August 2015</h4><br>
+                  <div style="display:inline-block">
+                    <h5>Android</h5>
+                    <img style="height:200px;margin-right:15px" src="../img/android-breakdown.min.png" />
+                  </div>
+                  <div style="display:inline-block">
+                    <h5>iOS</h5>
+                    <img style="height:200px" src="../img/ios-breakdown.min.png" />
+                  </div><br>
+                  <br>
+                  Thus if we liberally assume the same fragmentation of global Android users prevails in the US, then the effective market share for Android latest operating system versus iOS\'s is much lower.<br>
+                  <br>
+                  Long story short, I\'m starting off with iOS as my first foray into mobile...<br>
+                  <br>
+                  <blockquote><p>So, how do we learn iOS?</p></blockquote>
+                  That will be the subject of my series of blog posts on the subject.  They will cover my journey through this process, including interviews with those in the field, choices on which classes to take, and opinions on projects undertaken.<br>
+                  <br>
+                  Thanks for your time today, and if interested please see my next post on this journey, "Learning iOS — Objective-C versus Swift?"'
       }
   ];
 }])
@@ -92,12 +134,14 @@ angular.module('jacksonSierra.blog', ['ngSanitize'])
         , 'postReadMore': '='
       }
     , templateUrl: './html/components/blog/blog-post.min.html'
-    , controller: ['$scope', PostCtrl]
+    , controller: ['$scope', '$sce', PostCtrl]
   };
 });
 
-function PostCtrl($scope) {
-  $scope.postSnippet = $scope.postBody.substr(0, $scope.postChrLimit);
+function PostCtrl($scope, $sce) {
+  $scope.postSnippet = $sce.trustAsHtml($scope.postBody.substr(0, $scope.postChrLimit));
+
+  $scope.postBody = $sce.trustAsHtml($scope.postBody);
 
   $scope.togglePost = function() {
     $scope.postReadMore = !$scope.postReadMore;
