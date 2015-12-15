@@ -28,7 +28,6 @@ var jshint = require('gulp-jshint')
 
 var paths = {
     scripts: ['./client/app/**/*.js', './client/assets/js/**/*.js']
-  , libs: './client/assets/libs/**/*.js'
   , html: './client/app/**/*.html'
   , index: './client/*.html'
   , img: './client/assets/img/**/*'
@@ -102,8 +101,9 @@ gulp.task('cleanHTML', function() {
  */
 gulp.task('cleanJS', function() {
   del(paths.scriptsDist);
-  gulp.src(paths.scripts.concat([paths.libs]))
-      .pipe(stripDebug())
+  gulp.src(paths.scripts)
+      /*.pipe(stripDebug())*/
+      .pipe(concat('main.js'))
       .pipe(uglify())
       .pipe(rename(function(path) {
           path.basename += '.min';
