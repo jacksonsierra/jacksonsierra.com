@@ -120,6 +120,7 @@ gulp.task('cleanCSS', function() {
   del(paths.cssDist);
   gulp.src(paths.css)
       .pipe(autoPrefixer('last 2 versions'))
+      .pipe(concat('main.css'))
       .pipe(minifyCSS())
       .pipe(rename(function(path) {
           path.basename += '.min';
