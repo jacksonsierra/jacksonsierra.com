@@ -1,6 +1,6 @@
 <uib-carousel interval="slideInterval" no-wrap="noWrapSlides">
   <uib-slide ng-repeat="slide in slideArray" active="slide.active">
-    <div id="home-img" style="background-image: url({{slide.url}})"></div>
+    <div id="home-img" title={{slide.caption}} alt={{slide.caption}} style="background-image: url({{slide.url}})"></div>
     <div id="home-caption">{{slide.caption}}</div>
   </uib-slide>
 </uib-carousel>

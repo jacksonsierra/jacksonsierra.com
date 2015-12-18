@@ -36,6 +36,7 @@ angular.module('jacksonSierra.apps', [
             , 'background-size': 'contain'
           }
         , 'descrip': 'Real-time news and social media aggregator for Wikipedia available on the web or as a Google Chrome browser extension'
+        , 'alt': 'immedia, a real-time news and social media aggregator'
         , 'font': { 
               'font-family': 'Nunito'
             , 'color': '#00BFFF'
@@ -75,6 +76,7 @@ angular.module('jacksonSierra.apps', [
             , 'background-size': 'contain'
           }
         , 'descrip': 'Anonymous messaging board on web, iOS and Android platforms'
+        , 'alt': 'Murmur, an anonymous messaging board'
         , 'font': { 
               'font-family': 'Sarina'
             , 'color': 'rgb(5,101,188)'
@@ -108,6 +110,7 @@ angular.module('jacksonSierra.apps', [
             , 'background-size': 'cover'
           }
         , 'descrip': 'Match-making service for couples interested in doing activities with other couples'
+        , 'alt': 'Koupler, match-making service for couples'
         , 'font': {
               'font-family': 'Lato'
             , 'color': 'rgb(255, 255, 255)'
