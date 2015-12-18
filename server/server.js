@@ -17,8 +17,8 @@ var server = http.createServer(app);
 app.use(express.static('./client/dist'));
 app.set('title', 'Jackson Sierra');
 
-app.get('/', function(req, res) {
-  res.end();
+app.get('/*', function(req, res) {
+  res.sendFile('index.html', {root: './client/dist'});
 });
 
 server.listen(8000, 'localhost', function() {
