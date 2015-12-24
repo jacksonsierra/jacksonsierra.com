@@ -2,7 +2,12 @@ logs/*
 !.gitkeep
 node_modules/
 client/assets/libs/
-client/dist/
+client/dist/css/
+client/dist/js/
+client/dist/index.html
+client/dist/index-async.html
+client/dist/html/
+client/dist/libs/
 tmp
 .DS_Store
 .idea
