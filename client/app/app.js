@@ -9,6 +9,7 @@ var jacksonSierra = angular.module('jacksonSierra', [
   , 'jacksonSierra.apps'
   , 'jacksonSierra.blog'
   , 'jacksonSierra.about'
+  , 'jacksonSierra.services'
 ]);
 
 jacksonSierra.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
