@@ -13,5 +13,5 @@ angular.module('jacksonSierra.services', [
 }])
 
 .factory('Apps', ['$resource', function($resource) {
-
+  return $resource('/api/apps');
 }]);
