@@ -9,7 +9,7 @@ angular.module('jacksonSierra.services', [
 }])
 
 .factory('Blog_Posts', ['$resource', function($resource) {
-
+  return $resource('/api/blog_posts');
 }])
 
 .factory('Apps', ['$resource', function($resource) {
