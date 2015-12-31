@@ -163,7 +163,6 @@ footer li {
 }
 
 .collage-1 {
-  background-image: url('../img/buddy.min.jpg');
   top: 0;
   left: 1%;
   width: 20%;
@@ -171,7 +170,6 @@ footer li {
 }
 
 .collage-2 {
-  background-image: url('../img/agua-caliente.min.jpg');
   z-index: 1;
   top: 7.5%;
   left: 20%;
@@ -180,7 +178,6 @@ footer li {
 }
 
 .collage-3 {
-  background-image: url('../img/katy-jackson.min.png');
   top: 2.5%;
   left: 65%;
   width: 30%;
@@ -188,7 +185,6 @@ footer li {
 }
 
 .collage-4 {
-  background-image: url('../img/tina-jackson.min.jpg');
   top: 70%;
   left: 2.5%;
   width: 30%;
@@ -196,7 +192,6 @@ footer li {
 }
 
 .collage-5 {
-  background-image: url('../img/mom-jackson.min.jpg');
   top: 70%;
   left: 69%;
   width: 30%;
@@ -204,7 +199,6 @@ footer li {
 }
 
 .collage-6 {
-  background-image: url('../img/family.min.jpg');
   z-index: 2;
   top: 35%;
   left: 8%;
