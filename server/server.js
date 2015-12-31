@@ -8,7 +8,8 @@ var http = require('http')
   // , https = require('https')
   , express = require('express')
   , bodyParser = require('body-parser')
-  , images = require('./db/images.js');
+  , images = require('./db/images.js')
+  , blogPosts = require('./db/blog_posts.js');
 
 var app = express();
 var server = http.createServer(app);
@@ -23,6 +24,8 @@ app.get('/^(?!\/api\/)[\\s\\S]*/', function(req, res) {
 });
 
 app.get('/api/images*', images.findImages);
+
+app.get('/api/blog_posts', blogPosts.findBlogPosts);
 
 server.listen(8000, 'localhost', function() {
   console.log('Listening on localhost:8000');
