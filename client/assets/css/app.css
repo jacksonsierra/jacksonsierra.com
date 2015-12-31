@@ -57,6 +57,11 @@ footer li {
   display: inline;
 }
 
+.spinner {
+  width: 100px;
+  text-align: center;
+}
+
 .ext-icon {
   width: 32px;
   margin: 0 5px;

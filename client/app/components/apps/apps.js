@@ -5,5 +5,10 @@ angular.module('jacksonSierra.apps', [
 ])
 
 .controller('AppsCtrl', ['$scope', 'Apps', function($scope, Apps) {
-  $scope.apps = Apps.query();
+  $scope.loading = true;
+  Apps.query()
+      .$promise.then(function(apps) {
+        $scope.apps = apps;
+        $scope.loading = false;
+      });
 }]);

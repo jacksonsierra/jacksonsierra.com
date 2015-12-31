@@ -1,4 +1,5 @@
 <div class="container-overflow">
+  <img class="col-xs-offset-5 col-xs-2 spinner" src="../img/spinner.min.gif" ng-show="loading" />
   <div class="row row-md" ng-repeat="app in apps | orderBy: '-order'">
     <div class="col-md-2"></div>
     <a ng-href={{app.url}} target="_blank">

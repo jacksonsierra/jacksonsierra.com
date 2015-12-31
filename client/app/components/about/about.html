@@ -1,5 +1,6 @@
  <div class="container-overflow">
   <div class="col-xs-12 col-sm-12 col-md-7 col-md-offset-1 collage">
+    <img class="spinner col-xs-offset-5" src="../img/spinner.min.gif" ng-show="loading" />
     <div ng-repeat="image in images" style="background-image: url({{image.path}})" class="pic collage-{{$index+1}}" title={{image.title}} alt={{image.title}}></div>
   </div>
   <div class="col-md-3">

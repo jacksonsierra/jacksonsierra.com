@@ -5,7 +5,12 @@ angular.module('jacksonSierra.blog', [
 ])
 
 .controller('BlogCtrl', ['$scope', 'Blog_Posts', function($scope, Blog_Posts) {
-  $scope.blogPosts = Blog_Posts.query();
+  $scope.loading = true;
+  Blog_Posts.query()
+            .$promise.then(function(blogPosts) {
+              $scope.blogPosts = blogPosts;
+              $scope.loading = false;
+            });
 }])
 
 .directive('blogPost', function() {
