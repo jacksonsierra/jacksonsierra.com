@@ -1,5 +1,5 @@
 <div class="container-overflow">
-  <div class="row row-md" ng-repeat="app in appsArray">
+  <div class="row row-md" ng-repeat="app in apps | orderBy: '-order'">
     <div class="col-md-2"></div>
     <a ng-href={{app.url}} target="_blank">
       <div class="col-md-5" title="{{app.title}}" alt="{{app.alt}}" ng-style={{app.photo}}></div>
