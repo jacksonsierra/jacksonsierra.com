@@ -1,23 +1,23 @@
 <div class="container-overflow">
   <img class="col-xs-offset-5 col-xs-2 spinner" src="../img/spinner.min.gif" ng-show="loading" />
-  <div class="row row-md" ng-repeat="app in apps | orderBy: '-order'">
+  <div class="row app" ng-repeat="app in apps | orderBy: '-order'">
     <div class="col-md-2"></div>
     <a ng-href={{app.url}} target="_blank">
-      <div class="col-md-5" title="{{app.title}}" alt="{{app.alt}}" ng-style={{app.photo}}></div>
+      <div class="col-md-5 app-image" title="{{app.title}}" alt="{{app.alt}}" ng-style={{app.photo}}></div>
     </a>
-    <div class="col-md-3">
+    <div class="col-md-3 app-info">
       <a ng-href={{app.url}} target="_blank">
-        <h3 class="title-md-3" ng-style={{app.font}}>{{app.title}}</h3>
+        <h3 ng-style={{app.font}}>{{app.title}}</h3>
       </a>
-      <p class="descrip-md-3">{{app.descrip}}</p>
-      <ul class="list-inline links-md-3">
+      <p>{{app.descrip}}</p>
+      <ul class="list-inline" style="margin-left:0;text-align:center">
         <li ng-repeat="link in app.links">
           <a ng-href={{link.url}} target="_blank" tooltip-placement="top" uib-tooltip={{link.title}}>
             <img class="ext-icon" title="{{link.title}}" alt="{{link.title}}" ng-src={{link.icon}} />
           </a>
         </li>
       </ul>
-      <ul class="list-inline">
+      <ul style="padding-left:0">
         <li class="btn btn-default tag" ng-repeat="tech in app.stack">{{tech}}</li>
       </ul>
     </div>
