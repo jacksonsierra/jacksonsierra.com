@@ -16,35 +16,9 @@ h2, h4, p {
    clear: both;
 }
 
-footer {
-  text-align: center;
-  font: normal 100% 'Raleway', Arial, sans-serif;
-  background-color: rgb(255, 255, 255);
-  border-top: 2em solid rgb(255, 255, 255);
-  border-bottom: 2em solid rgb(255, 255, 255);
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-}
-
-footer ul {
-  display: inline;
-  padding: 0;
-}
-
-footer li {
-  display: inline;
-}
-
 .spinner {
   width: 100px;
   text-align: center;
-}
-
-.ext-icon {
-  width: 32px;
-  margin: 0 5px;
 }
 
 #home-img {
@@ -212,11 +186,6 @@ footer li {
       padding-bottom: 20px;
     }
 
-    footer {
-      bottom: auto;
-      height: 175px;
-    }
-
     .collage {
       height: calc(100vh - 200px);
     }
@@ -249,10 +218,6 @@ footer li {
     .row-md {
       height: auto;
       margin-top: 5vh;
-    }
-
-    footer {
-      height: 150px;
     }
 
     .collage {
