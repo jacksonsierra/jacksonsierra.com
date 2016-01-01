@@ -3,7 +3,7 @@
 angular.module('jacksonSierra.header', [])
 
 .controller('HeaderCtrl', ['$scope', function($scope) {
-  $scope.pageArray = [
+  $scope.pages = [
       {
           'title': 'HOME'
         , 'state': 'root'

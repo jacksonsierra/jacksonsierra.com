@@ -9,31 +9,11 @@ h2, h4, p {
   font-family: 'Raleway' !important;
 }
 
-header {
-  background-color: rgb(255, 255, 255);
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
 .clearfix:after { 
    content: " ";
    display: block; 
    height: 0; 
    clear: both;
-}
-
-.navibar {
-  font: normal 1.4em 'Raleway', Arial, sans-serif;
-  font-weight: 600;
-}
-
-.navibar a {
-  color: rgb(205, 205, 205);
-}
-
-.navibar a:hover, .navibar a:focus, .navibar a:active, .navibar .active {
-  color: rgb(0, 0, 0);
 }
 
 footer {
@@ -84,7 +64,7 @@ footer li {
 }
 
 .container-overflow {
-  overflow: scroll;
+  overflow: auto;
   height: auto;
 }
 
@@ -219,60 +199,8 @@ footer li {
 
   /* Custom, iPhone Retina */ 
   @media only screen and (min-width : 320px) {
-    header {
-      border-top: 15px solid rgb(205, 205, 205);
-      padding: 20px 0;
-    }
-
     #home-img {
       height: calc(100vh - 122px);
-    }
-
-    .logo {
-      width: 60px;
-      height: 67px;
-    }
-
-    a.logo {
-      margin-left: 15px;
-      margin-right: 20px;
-      float: left;
-      width: 60px;
-      height: 67px;
-    }
-
-    .menu {
-      width: 30px;
-      height: 22px;
-      cursor: pointer;
-    }
-
-    a.menu {
-      margin: 0 20px 0 0;
-      float: right;
-      width: 30px;
-      height: 22px;
-      line-height: 67px;
-    }
-
-    .glyphicon {
-      font-size: 1.8em;
-      vertical-align: middle;
-      color: rgb(0, 0, 0);
-    }
-
-    .navibar {
-      /*display: none;*/
-      clear: left;
-      width: 100%;
-      list-style: none;
-      padding: 0;
-    }
-
-    .navibar li {
-      background-color: rgb(245, 245, 245);
-      border: 1px solid rgb(255, 255, 255);
-      padding: 0 0 0 30px;
     }
 
     .row {
@@ -309,13 +237,6 @@ footer li {
 
   /* Small Devices, Tablets */
   @media only screen and (min-width : 768px) {
-    header {
-      position: fixed;
-      z-index: 3;
-      border-top: 30px solid rgb(205, 205, 205);
-      padding: 30px 0;
-    }
-
     section {
       position: relative;
       margin-top: 201px;
@@ -324,38 +245,6 @@ footer li {
     #home-img {
       height: calc(100vh - 201px);
     }
-
-    .logo {
-      width: 100px;
-      height: 111px;
-    }
-
-    a.logo {
-      margin: 0 70px;
-      float: left;
-      width: 100px;
-      height: 111px;
-    }
-
-    .menu {
-      display: none;
-    }
-
-    .navibar {
-      display: inline !important;
-      line-height: 111px;
-    }
-
-    .navibar li {
-      display: inline;
-      margin: 0 6.0435132957292505% 0 0;
-      background-color: rgb(255, 255, 255);
-      padding: 0;
-    }
-
-    /*.container-overflow {
-      height: 70vh;
-    }*/
 
     .row-md {
       height: auto;

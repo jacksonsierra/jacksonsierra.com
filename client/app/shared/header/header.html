@@ -8,7 +8,7 @@
   </span>
 </a>
 <ul class="navibar" ng-class="{ 'display-block': hamburgerClicked, 'display-none': !hamburgerClicked }">
-  <li ng-repeat="page in pageArray">
+  <li ng-repeat="page in pages">
     <a ui-sref={{page.state}} ng-class="{ 'active': $index == pageSelected }" ng-click="clickPage($index)">{{page.title}}</a>
   </li>
 </ul>
