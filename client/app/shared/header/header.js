@@ -1,3 +1,12 @@
+/*
+    file: header.js
+    - - - - - - - - - - -
+    Controller for shared Header component,
+    which lists the pages of the website and
+    controls the dynamic CSS styling based on
+    what page is clicked
+ */
+
 'use strict';
 
 angular.module('jacksonSierra.header', [])

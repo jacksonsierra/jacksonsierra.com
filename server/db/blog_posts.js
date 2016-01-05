@@ -1,3 +1,10 @@
+/*
+    file: db/blog_posts.js
+    - - - - - - - - - - -
+    Helper functions for querying `blog_posts`
+    collection in MongoDB instance
+ */
+
 var db = require('./db.js')
   , url = require('url')
   , moment = require('moment');

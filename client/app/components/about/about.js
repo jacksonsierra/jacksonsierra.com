@@ -1,3 +1,11 @@
+/*
+    file: about.js
+    - - - - - - - - - - -
+    Controller for About page/component,
+    uses the Images factory from services.js
+    to query images for a given page
+ */
+
 'use strict';
 
 angular.module('jacksonSierra.about', [])

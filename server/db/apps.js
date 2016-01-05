@@ -1,3 +1,10 @@
+/*
+    file: db/apps.js
+    - - - - - - - - - - -
+    Helper functions for querying `apps`
+    collection in MongoDB instance
+ */
+
 var db = require('./db.js');
 
 module.exports = {

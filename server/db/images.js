@@ -1,3 +1,10 @@
+/*
+    file: db/images.js
+    - - - - - - - - - - -
+    Helper functions for querying `images`
+    collection in MongoDB instance
+ */
+
 var db = require('./db.js')
   , url = require('url');
 

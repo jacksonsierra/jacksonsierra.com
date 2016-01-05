@@ -1,3 +1,11 @@
+/*
+    file: apps.js
+    - - - - - - - - - - -
+    Controller for Apps page/component,
+    uses the Apps factory from services.js
+    to retrieve all Apps' information
+ */
+
 'use strict';
 
 angular.module('jacksonSierra.apps', [

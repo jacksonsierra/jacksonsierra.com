@@ -1,3 +1,15 @@
+/*
+    file: app.js
+    - - - - - - - - - - -
+    Configuration for jacksonSierra Angular app,
+    which uses Angular UI Router to handle state
+    change between different components
+
+    There is also a Google Analytics' listener
+    to handle the traversal through different views
+    given that it is a single-page webapp
+ */
+
 'use strict';
 
 // Declare app level module which depends on views, and components
@@ -12,6 +24,11 @@ var jacksonSierra = angular.module('jacksonSierra', [
   , 'jacksonSierra.services'
 ]);
 
+/*
+    UI Router configuration retains header/footer components
+    across all pages and nested views within the container
+    state that actually maintains the different page bodies
+ */
 jacksonSierra.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
   $urlRouterProvider.otherwise('/');
   
@@ -62,6 +79,10 @@ jacksonSierra.config(['$urlRouterProvider', '$stateProvider', function($urlRoute
     });
 }]);
 
+/*
+    Google Analytics' listener to handle page view
+    traversal in a single-page app
+ */
 jacksonSierra.run(['$rootScope', '$location', '$window', function($rootScope, $location, $window) {
   $rootScope
     .$on('$stateChangeSuccess', function(event) {

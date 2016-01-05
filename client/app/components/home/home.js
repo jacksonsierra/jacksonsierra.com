@@ -1,3 +1,13 @@
+/*
+    file: home.js
+    - - - - - - - - - - -
+    Controller for Home page/component,
+    uses the Images factory from services.js
+    to query images for a given page
+
+    Home view uses Bootstrap's image carousel
+ */
+
 'use strict';
 
 angular.module('jacksonSierra.home', [])

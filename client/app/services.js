@@ -1,3 +1,12 @@
+/*
+    file: services.js
+    - - - - - - - - - - -
+    Declaration of different factories for
+    images, apps and blog posts using ngResource
+    that send low-level $http requests to server
+    to query content from database
+ */
+
 'use strict';
 
 angular.module('jacksonSierra.services', [
