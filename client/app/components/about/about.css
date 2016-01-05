@@ -1,0 +1,86 @@
+/*
+    file: about.css
+    - - - - - - - - - - -
+    CSS stylesheet for the about
+    component
+ */
+
+.collage {
+  max-width: 100vw;
+  margin-bottom: 30px;
+}
+
+.pic {
+  background-position: 50% 50%;
+  background-size: cover;
+  position: absolute;
+}
+
+.collage-1 {
+  top: 0;
+  left: 1%;
+  width: 20%;
+  height: 25%;
+}
+
+.collage-2 {
+  z-index: 1;
+  top: 7.5%;
+  left: 20%;
+  width: 50%;
+  height: 30%;
+}
+
+.collage-3 {
+  top: 2.5%;
+  left: 65%;
+  width: 30%;
+  height: 30%;
+}
+
+.collage-4 {
+  top: 70%;
+  left: 2.5%;
+  width: 30%;
+  height: 30%;
+}
+
+.collage-5 {
+  top: 70%;
+  left: 69%;
+  width: 30%;
+  height: 30%;
+}
+
+.collage-6 {
+  z-index: 2;
+  top: 35%;
+  left: 8%;
+  width: 80%;
+  height: 38%;
+}
+
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+  /*==========  Mobile First Method  ==========*/
+
+  /* Custom, iPhone Retina */ 
+  @media only screen and (min-width : 320px) {
+    .collage {
+      height: calc(100vh - 200px);
+    }
+  }
+
+  /* Small Devices, Tablets */
+  @media only screen and (min-width : 768px) {
+    .collage {
+      height: calc(100vh - 201px);
+    }
+
+    .collage-6 {
+      left: 16%;
+      width: 60%;
+    }
+  }
