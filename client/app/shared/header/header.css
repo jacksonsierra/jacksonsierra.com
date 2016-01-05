@@ -25,6 +25,18 @@ header {
   color: rgb(0, 0, 0);
 }
 
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.margin-offset {
+  margin-bottom: 15px;
+}
+
 /*==================================================
 =            Bootstrap 3 Media Queries             =
 ==================================================*/

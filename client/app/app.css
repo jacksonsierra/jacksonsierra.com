@@ -1,4 +1,9 @@
-/* app css stylesheet */
+/*
+    file: app.css
+    - - - - - - - - - - -
+    CSS stylesheet for any classes
+    used across multiple views
+ */
 
 a {
   text-decoration: none !important;
@@ -29,18 +34,6 @@ h2, h4, p {
 .container-overflow {
   overflow: auto;
   height: auto;
-}
-
-.display-block {
-  display: block;
-}
-
-.display-none {
-  display: none;
-}
-
-.margin-bottom {
-  margin-bottom: 15px;
 }
 
 /*==================================================
