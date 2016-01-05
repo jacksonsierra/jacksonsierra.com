@@ -1,0 +1,54 @@
+/*
+    file: blog.css
+    - - - - - - - - - - -
+    CSS stylesheet for the blog
+    component
+ */
+
+.post {
+  border-bottom: 1px dotted rgb(225, 225, 225);
+}
+
+.headline {
+  font-weight: 600;
+}
+
+.subhead {
+  color: rgb(150, 150, 150);
+  margin-bottom: 25px;
+}
+
+.metadata {
+  color: rgb(150, 150, 150);
+  text-align: center;
+}
+
+.read-more {
+  font-weight: 600;
+  font-family: 'Raleway', Arial, sans-serif;
+  color: rgb(150, 150, 150);
+  text-align: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+  /*==========  Mobile First Method  ==========*/
+
+  /* Custom, iPhone Retina */ 
+  @media only screen and (min-width : 320px) {
+    .post {
+      padding-bottom: 20px;
+    }
+  }
+
+  /* Small Devices, Tablets */
+  @media only screen and (min-width : 768px) {
+    .post {
+      height: auto;
+      margin-top: 5vh;
+    }
+  }

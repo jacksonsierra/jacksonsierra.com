@@ -16,6 +16,11 @@ h2, h4, p {
    clear: both;
 }
 
+.list-inline {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 .spinner {
   width: 100px;
   text-align: center;
@@ -36,29 +41,6 @@ h2, h4, p {
 
 .margin-bottom {
   margin-bottom: 15px;
-}
-
-.headline {
-  font-weight: 600;
-}
-
-.subhead {
-  color: rgb(150, 150, 150);
-  margin-bottom: 25px;
-}
-
-.metadata {
-  color: rgb(150, 150, 150);
-  text-align: center;
-}
-
-.read-more {
-  font-weight: 600;
-  font-family: 'Raleway', Arial, sans-serif;
-  color: rgb(150, 150, 150);
-  text-align: center;
-  margin-bottom: 20px;
-  cursor: pointer;
 }
 
 /*==================================================

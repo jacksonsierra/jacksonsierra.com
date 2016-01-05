@@ -1,6 +1,6 @@
 <div class="container-overflow">
   <img class="col-xs-offset-5 col-xs-2 spinner" src="../img/spinner.min.gif" ng-show="loading" />
-  <div class="row row-md" ng-repeat="post in blogPosts | orderBy:'-date'">
+  <div class="row post" ng-repeat="post in blogPosts | orderBy:'-date'">
     <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
       <h2 class="headline">{{post.headline}}</h2>
       <h4 class="subhead">{{post.subhead}}</h4>
